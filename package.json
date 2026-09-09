@@ -1,0 +1,62 @@
+{
+  "name": "canvas-agent-reader",
+  "version": "0.1.0",
+  "description": "Autonomous AI Agent tool & MCP Server to inspect, capture, and semantically read WebGL and Canvas applications (Figma, Canva, generic WebGL)",
+  "author": "Davin Surya",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "canvas-agent-reader": "./dist/bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepare": "npm run build",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "extract": "node scripts/extract.mjs",
+    "start": "node ./dist/bin/cli.js",
+    "mcp": "node ./dist/bin/cli.js mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "puppeteer-core": "^24.3.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ai-agent",
+    "mcp",
+    "model-context-protocol",
+    "webgl",
+    "canvas",
+    "figma",
+    "reverse-engineering"
+  ]
+}

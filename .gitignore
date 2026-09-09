@@ -1,0 +1,30 @@
+﻿node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tsbuildinfo
+temp_parts/
+.tmp*
+
+# Output screenshots & results (NEVER COMMIT)
+output/
+output/**
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Environment & Secrets (NEVER COMMIT)
+.env
+.env.*
+.env*.local
+!.env.example
+
+# Confidential link files (NEVER COMMIT)
+figma-links.txt
+figma-links*.txt
+!figma-links.example.txt
